@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+python-jose
+werkzeug
+pydantic-settings
+scikit-learn
+numpy
