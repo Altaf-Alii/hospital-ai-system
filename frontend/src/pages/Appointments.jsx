@@ -16,7 +16,7 @@ function Appointments() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/appointments/')
+      const res = await axios.get('http://https://hospital-ai-system-production.up.railway.app/appointments/')
       setAppointments(res.data)
     } catch (err) { console.log(err) }
   }
@@ -40,9 +40,9 @@ function Appointments() {
     setLoading(true)
     try {
       if (editAppointment) {
-        await axios.put(`http://localhost:8000/appointments/${editAppointment.id}`, form)
+        await axios.put(`http://https://hospital-ai-system-production.up.railway.app/appointments/${editAppointment.id}`, form)
       } else {
-        await axios.post('http://localhost:8000/appointments/', form)
+        await axios.post('http://https://hospital-ai-system-production.up.railway.app/appointments/', form)
       }
       setShowForm(false)
       setEditAppointment(null)
@@ -54,13 +54,13 @@ function Appointments() {
 
   const handleDelete = async (id) => {
     if (confirm('Delete this appointment?')) {
-      await axios.delete(`http://localhost:8000/appointments/${id}`)
+      await axios.delete(`http://https://hospital-ai-system-production.up.railway.app/appointments/${id}`)
       fetchAppointments()
     }
   }
 
   const updateStatus = async (id, status) => {
-    await axios.put(`http://localhost:8000/appointments/${id}`, { status })
+    await axios.put(`http://https://hospital-ai-system-production.up.railway.app/appointments/${id}`, { status })
     fetchAppointments()
   }
 

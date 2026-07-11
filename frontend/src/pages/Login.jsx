@@ -13,7 +13,7 @@ function Login({ setIsLoggedIn, setUser }) {
     setError('')
 
     try {
-      const res = await axios.post('http://localhost:8000/auth/login', {
+      const res = await axios.post('http://https://hospital-ai-system-production.up.railway.app/auth/login', {
         email,
         password
       })

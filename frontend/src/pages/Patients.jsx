@@ -16,7 +16,7 @@ function Patients() {
 
   const fetchPatients = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/patients/')
+      const res = await axios.get('http://https://hospital-ai-system-production.up.railway.app/patients/')
       setPatients(res.data)
     } catch (err) { console.log(err) }
   }
@@ -43,11 +43,11 @@ function Patients() {
     setLoading(true)
     try {
       if (editPatient) {
-        await axios.put(`http://localhost:8000/patients/${editPatient.id}`, {
+        await axios.put(`http://https://hospital-ai-system-production.up.railway.app/patients/${editPatient.id}`, {
           ...form, age: parseInt(form.age)
         })
       } else {
-        await axios.post('http://localhost:8000/patients/', {
+        await axios.post('http://https://hospital-ai-system-production.up.railway.app/patients/', {
           ...form, age: parseInt(form.age)
         })
       }
@@ -61,7 +61,7 @@ function Patients() {
 
   const handleDelete = async (id) => {
     if (confirm('Delete this patient?')) {
-      await axios.delete(`http://localhost:8000/patients/${id}`)
+      await axios.delete(`http://https://hospital-ai-system-production.up.railway.app/patients/${id}`)
       fetchPatients()
     }
   }
