@@ -16,7 +16,7 @@ function Doctors() {
 
   const fetchDoctors = async () => {
     try {
-      const res = await axios.get('http://https://hospital-ai-system-production.up.railway.app/doctors/')
+      const res = await axios.get('https://hospital-ai-system-production.up.railway.app/doctors/')
       setDoctors(res.data)
     } catch (err) { console.log(err) }
   }
@@ -42,9 +42,9 @@ function Doctors() {
     setLoading(true)
     try {
       if (editDoctor) {
-        await axios.put(`http://https://hospital-ai-system-production.up.railway.app/doctors/${editDoctor.id}`, form)
+        await axios.put(`https://hospital-ai-system-production.up.railway.app/doctors/${editDoctor.id}`, form)
       } else {
-        await axios.post('http://https://hospital-ai-system-production.up.railway.app/doctors/', form)
+        await axios.post('https://hospital-ai-system-production.up.railway.app/doctors/', form)
       }
       setShowForm(false)
       setEditDoctor(null)
@@ -56,13 +56,13 @@ function Doctors() {
 
   const handleDelete = async (id) => {
     if (confirm('Delete this doctor?')) {
-      await axios.delete(`http://https://hospital-ai-system-production.up.railway.app/doctors/${id}`)
+      await axios.delete(`https://hospital-ai-system-production.up.railway.app/doctors/${id}`)
       fetchDoctors()
     }
   }
 
   const toggleAvailability = async (doctor) => {
-    await axios.put(`http://https://hospital-ai-system-production.up.railway.app/doctors/${doctor.id}`, { availability: !doctor.availability })
+    await axios.put(`https://hospital-ai-system-production.up.railway.app/doctors/${doctor.id}`, { availability: !doctor.availability })
     fetchDoctors()
   }
 

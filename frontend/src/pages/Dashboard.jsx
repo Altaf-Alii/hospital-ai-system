@@ -10,7 +10,7 @@ function Dashboard() {
   })
 
   useEffect(() => {
-    axios.get('http://https://hospital-ai-system-production.up.railway.app/dashboard/stats')
+    axios.get('https://hospital-ai-system-production.up.railway.app/dashboard/stats')
       .then(res => setStats(res.data))
       .catch(err => console.log(err))
   }, [])

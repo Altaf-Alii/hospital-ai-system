@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const API_BASE = 'http://https://hospital-ai-system-production.up.railway.app'
+const API_BASE = 'https://hospital-ai-system-production.up.railway.app'
 
 const formatLabel = (key) =>
   key

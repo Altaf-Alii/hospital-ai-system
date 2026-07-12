@@ -12,7 +12,7 @@ import { Brain, Loader2, AlertCircle, Stethoscope } from "lucide-react";
  * 3. Update API_BASE below to match your backend URL.
  */
 
-const API_BASE = "http://https://hospital-ai-system-production.up.railway.app"; // <-- change if your backend runs on a different host/port
+const API_BASE = "https://hospital-ai-system-production.up.railway.app"; // <-- change if your backend runs on a different host/port
 
 // Friendly display labels for symptom keys (snake_case -> readable)
 const formatLabel = (key) =>
